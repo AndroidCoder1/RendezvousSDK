@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="6dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:background="#eee"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/friendsBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <fragment class="com.rancard.rndvusdk.fragments.FriendsInRendezvous"
+                    android:id="@+id/friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/friendsNoTopicsBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <fragment class="com.rancard.rndvusdk.fragments.FriendsNoTopicsInRendezvous"
+                android:id="@+id/friendsNoTopics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/peopleBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fragment class="com.rancard.rndvusdk.fragments.PeopleYouMayKnow"
+                    android:id="@+id/people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

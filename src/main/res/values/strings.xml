@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Rendezvous SDK</string>
+    <string name="device_type">Phone</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="powered_by">Powered by</string>
+    <string name="rationale_contacts">Use Rendezvous to find your firends who use this app. Tap ok and your adress book will be uploaded so that we can assist in finding your freinds using this app and help your firends find you.</string>
+    <string name="okay">OKAY</string>
+    <string name="notnow">NOT NOW</string>
+</resources>

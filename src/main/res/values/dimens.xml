@@ -1,0 +1,74 @@
+
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="default_container_padding">16dp</dimen>
+
+    <dimen name="button_margin">40dp</dimen>
+    <dimen name="text_padding">15dp</dimen>
+    <dimen name="action_bar_offset">100dp</dimen>
+    <dimen name="showcase_radius">40dp</dimen>
+    <dimen name="showcase_radius_inner">30dp</dimen>
+    <dimen name="showcase_radius_outer">60dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="regular">8dp</dimen>
+    <dimen name="six">6dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="four">4dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="fontTiny">12sp</dimen>
+    <dimen name="fontSmall">14sp</dimen>
+    <dimen name="fontRegular">16sp</dimen>
+    <dimen name="fontTitle">18sp</dimen>
+
+    <!-- Nofication bar button -->
+    <dimen name="status_bar_button_width_height">48dp</dimen>
+    <dimen name="status_bar_album_art">64dp</dimen>
+    <dimen name="status_bar_button_info_container_padding_left">11dp</dimen>
+    <dimen name="notification_expanded_height">128.0dip</dimen>
+    <dimen name="play_controls_notification">48.0dip</dimen>
+    <dimen name="notification_padding">8.0dip</dimen>
+
+    <!-- Notification template -->
+    <dimen name="notification_big_icon_height">64dp</dimen>
+    <dimen name="notification_big_icon_width">64dp</dimen>
+    <dimen name="notification_info_container_padding_left">8dp</dimen>
+    <dimen name="notification_info_container_padding_bottom">4dp</dimen>
+    <dimen name="notification_action_padding">8dp</dimen>
+    <dimen name="notification_action_height">48dp</dimen>
+    <dimen name="notification_action_width">48dp</dimen>
+
+    <!-- Notification template expanded -->
+    <dimen name="notification_expanded_buttons_divider_padding">12dp</dimen>
+    <dimen name="notification_expanded_button_height">48dp</dimen>
+    <dimen name="notification_expanded_button_padding">10dp</dimen>
+    <dimen name="notification_expanded_content_padding_top">8dp</dimen>
+    <dimen name="notification_expanded_collapse_padding">8dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_size_extra_micro">10sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+
+
+    <dimen name="padSmall">@dimen/six</dimen>
+    <dimen name="padRegular">@dimen/ten</dimen>
+    <dimen name="padMedium">@dimen/sixteen</dimen>
+    <dimen name="padLarge">30dp</dimen>
+    <dimen name="padXLarge">40dp</dimen>
+
+    <dimen name="marginSmall">@dimen/six</dimen>
+    <dimen name="marginRegular">@dimen/ten</dimen>
+    <dimen name="marginMedium">@dimen/sixteen</dimen>
+    <dimen name="marginLarge">30dp</dimen>
+    <dimen name="marginXLarge">40dp</dimen>
+
+
+
+</resources>

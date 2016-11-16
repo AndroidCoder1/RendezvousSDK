@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp">
+
+    <Button
+        android:id="@+id/followBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rendezvous_button_follow"
+        android:textSize="12sp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:textColor="#eee"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="false"
+        android:text=""
+        android:visibility="gone"
+        />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profilePix"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_user_placeholder"
+        android:adjustViewBounds="true"
+        android:tint="#FFF"
+        android:layout_alignParentLeft="true"
+        app:riv_corner_radius="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/followBtn"
+        android:layout_toRightOf="@+id/profilePix"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555"
+            android:paddingRight="7dp"
+            android:id="@+id/tagName"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            />
+            <!--android:textAllCaps="true"-->
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:text="is following 3 topics"
+            android:textSize="12dp"
+            android:id="@+id/tagUsers"
+            android:textColor="#bbb"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

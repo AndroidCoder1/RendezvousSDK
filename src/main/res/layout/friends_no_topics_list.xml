@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainCardNoTopics"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="3dp"
+    android:padding="8dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:background="@color/white">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
+                android:text="Friends"
+                android:id="@+id/txtFriendsNoTopics"
+                android:textStyle="normal"
+                android:paddingTop="10dp"
+                android:textSize="17dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="7dp"
+                android:textColor="#555"
+                android:layout_gravity="left|top" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.1"
+                android:maxLines="2"
+                android:paddingBottom="13dp"
+                android:paddingLeft="7dp"
+                android:text="Recommend new topics to these friends"
+                android:textSize="12dp"
+                android:id="@+id/tagUsersNoTopics"
+                android:textColor="#999"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ddd"
+                android:elevation="-2dp"
+                android:layout_marginBottom="5dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/friendsListNoTopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progFriendsNoTopics"
+                    android:layout_gravity="center" />
+
+
+            </FrameLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More Friends"
+                android:background="@color/transparent_widget_background"
+                android:textSize="12dp"
+                android:textAllCaps="false"
+                android:textColor="#888"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="right"
+                android:textStyle="italic"
+                android:id="@+id/seeMoreFriendsBtnNoTopics" />
+
+            </LinearLayout>
+    </android.support.v7.widget.CardView>

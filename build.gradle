@@ -1,0 +1,163 @@
+//apply plugin: 'com.jfrog.artifactory'
+//apply plugin: 'maven-publish'
+
+//buildscript {
+//    repositories {
+//        maven { url 'http://repo1.maven.org/maven2' }
+//        jcenter { url "http://jcenter.bintray.com/" }
+//        maven {url "https://jitpack.io"}
+//    }
+//
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:2.2.2'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
+//        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.1"
+//    }
+//}
+
+apply plugin: 'com.android.library'
+
+android {
+
+//    configurations.all {
+//        exclude module: 'play-services-auth'
+//    }
+//
+//
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-v4'
+//        all*.exclude group: 'com.android.support', module: 'support-annotations'
+//    }
+//
+//    lintOptions {
+//        abortOnError false
+//    }
+//
+//    repositories {
+//        maven { url 'http://repo1.maven.org/maven2' }
+//        jcenter { url "http://jcenter.bintray.com/" }
+//        maven {url "https://jitpack.io"}
+//    }
+//
+//    packagingOptions {
+//        exclude 'LICENSE.txt'
+//        exclude 'META-INF/*'
+//        exclude 'META-INF/LICENSE-FIREBASE.txt'
+//        exclude 'META-INF/ECLIPSE_.RSA'
+//        exclude 'META-INF/ECLIPSE_.SF'
+//    }
+
+    compileSdkVersion 23
+    buildToolsVersion '24.0.0'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/values-sw600dp', 'src/main/res/values-sw720dp', 'src/main/res/values-dw600dp']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile('com.android.support:appcompat-v7:23.3.0') {
+        transitive = true
+    }
+    compile('com.squareup.okhttp3:okhttp:3.0.1') {
+        transitive = true
+    }
+    compile('com.android.support:recyclerview-v7:23.1.1') {
+        transitive = true
+    }
+    compile('com.makeramen:roundedimageview:2.2.0') {
+        transitive = true
+    }
+    compile('com.android.support:cardview-v7:23.0.+') {
+        transitive = true
+    }
+    compile('com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2') {
+        transitive = true
+    }
+    compile('com.android.support:support-v4') {
+        transitive = true
+    }
+    compile ('com.facebook.android:facebook-android-sdk:4.0.0'){
+        transitive = true
+    }
+    compile('com.google.code.gson:gson:2.6.1') {
+        transitive = true
+    }
+    compile('org.greenrobot:eventbus:3.0.0') {
+        transitive = true
+    }
+    compile('pub.devrel:easypermissions:0.1.5') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.github.javiersantos:MaterialStyledDialogs:1.4@aar') {
+        exclude group: 'com.android.support', module: 'support-v4'
+        transitive = true
+    }
+    compile ('com.google.android.gms:play-services-auth:9.0.0')
+    provided 'org.projectlombok:lombok:1.12.6'
+
+}
+
+//def libraryGroupId = 'com.rancard.rndvusdk'
+//def libraryArtifactId = 'RendezvousSDK'
+//def libraryVersion = '1.0.5'
+
+//publishing {
+//    publications {
+//        aar(MavenPublication) {
+//            groupId libraryGroupId
+//            version libraryVersion
+//            artifactId libraryArtifactId
+//            artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
+//        }
+//    }
+//}
+
+//artifactory {
+//    contextUrl = 'http://localhost:8081/artifactory'
+//    publish {
+//        repository {
+//            repoKey = 'libs-release-local'
+//
+//            username = 'lisa011188'
+//            password = 'sobolo123#'
+//        }
+//        defaults {
+//            publications('aar')
+//            publishArtifacts = true
+//
+//            properties = ['qa.level': 'basic', 'q.os': 'android', 'dev.team': 'core']
+//            publishPom = true
+//        }
+//    }
+//}
+ext {
+    PUBLISH_GROUP_ID = 'com.rancard.rndvusdk'
+    PUBLISH_ARTIFACT_ID = 'RendezvousSDK'
+    PUBLISH_VERSION = '1.0.5'
+}
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

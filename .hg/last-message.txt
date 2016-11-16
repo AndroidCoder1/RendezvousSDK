@@ -1,0 +1,1 @@
+Rendezvous SDK to Bintray
